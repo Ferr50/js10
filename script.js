@@ -164,5 +164,6 @@ function resetImageBoard() {
         }
     }
 
+    turn = 0;
 }
 
