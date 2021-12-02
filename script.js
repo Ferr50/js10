@@ -70,13 +70,21 @@ function tictactoe(id) {
         break;
         case '3-1':
             if(board[2][0] == 0) {
-                board[2][0] = 1;
+                if(turn == 0){
+                    board[2][0] = 1;
+                }else{
+                    board[2][0] = 2;
+                }
                 printImage(id);
             }
         break;
         case '3-2':
             if(board[2][1] == 0) {
-                board[2][1] = 1;
+                if(turn == 0){
+                    board[2][1] = 1;
+                }else{
+                    board[2][1] = 2;
+                }
                 printImage(id);
             }
         break;
@@ -103,7 +111,8 @@ function printImage(id) {
         document.getElementById(id).style.backgroundImage = player2;
         turn = turn - 1;
     }
-
+    console.log(turn);
+    console.log(board);
 }
 
 function winner() {
